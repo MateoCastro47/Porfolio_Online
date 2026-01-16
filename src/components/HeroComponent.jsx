@@ -1,4 +1,5 @@
-import "./HeroComponent.css"
+import "./css/HeroComponent.css"
+import heroImage from "../assets/foto-hero.png"
 
 function HeroComponent() {
     return (
@@ -43,7 +44,7 @@ function HeroComponent() {
                             <img
                                 alt="Modern laptop displaying code in a clean workspace"
                                 className="hero-image"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0uoROiZEQCEKAvMCFpxPAWuqnvrgEO6l7Jkt7WkBXNU2NwUv7GYjSoA7AClqt3_HHq6W7xPIrWCyiHhb6VjeFRlh4TJSe8gfF-x8weY_Ztx6bP5v1Zth_Xpvl5MtMVqp5tXGhEV-_E6v1t4Dh7jRWxIvH-HnVKtlOcg4CSRNekSHTQTRSfKGbfdWamn6wN3fkckd4wbyA8wfeiKAVfzEiUf79jCVlt-DoNkB82BJMHpMI69SVSMZfx8jPbt_VNAMpNTHQsw1CuH7r"
+                                src={heroImage}
                             />
 
                             {/* Glass Overlay at bottom */}
