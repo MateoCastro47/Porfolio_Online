@@ -7,6 +7,7 @@
 - [HeroComponent](#herocomponent)
 - [AboutComponent](#aboutcomponent)
 - [SkillsComponent](#skillscomponent)
+- [Navegación Interna](#navegación-interna)
 - [Propiedades CSS Avanzadas](#propiedades-css-avanzadas)
 - [Referencias y Recursos](#referencias-y-recursos)
 
@@ -1038,6 +1039,33 @@ Estilos base con variantes:
 
 - **Tablets (`1024px`)**: Cambia a 2 columnas.
 - **Móvil (`640px`)**: Cambia a 1 columna y la barra de "Learning" inferior se apila verticalmente.
+
+---
+
+## ⚓ Navegación Interna
+
+Para permitir que el usuario se desplace entre secciones sin recargar la página, se ha implementado un sistema de **Anchor Links** (enlaces de ancla).
+
+### Configuración de IDs
+Cada sección principal tiene un identificador único asignado mediante el atributo `id`:
+- **Hero**: `id="hero"`
+- **About**: `id="about"`
+- **Skills**: `id="skills"`
+
+### Enlaces en el Header
+Los enlaces en el `HeaderComponent` utilizan el símbolo `#` seguido del ID correspondiente:
+```jsx
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+```
+
+### Desplazamiento Suave (Smooth Scroll)
+Se ha añadido una regla global en `index.css` para que el movimiento sea fluido en lugar de un salto instantáneo:
+```css
+html {
+  scroll-behavior: smooth;
+}
+```
 
 ---
 
