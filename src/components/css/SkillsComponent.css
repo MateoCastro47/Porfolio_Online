@@ -1,0 +1,169 @@
+.skills-section{
+    padding: 8rem 2rem;
+    background-color: transparent;
+}
+
+.skills-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-header{
+    text-align: center;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.skills-badge{
+    background-color: #ecfdf5;
+    color: #10b981;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+.skills-header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.2;
+}
+.skills-header p {
+    color: #6b7280;
+    max-width: 650px;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.skill-card{
+    background: white;
+    padding: 2.5rem 2.25rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Sombra base */
+    display: flex;
+    flex-direction: column;
+    border: 1px  solid rgba(229, 231, 235, 0.5);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.08); /* Sombra de elevación */
+    border-color: rgba(16, 185, 129, 0.2);
+}
+
+.skill-icon-wrapper {
+    width: 65px;  /* Aumenté ligeramente el tamaño para mejor visibilidad */
+    height: 65px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.75rem;
+    background-color: #f9fafb; /* Opcional: un fondo muy sutil ayuda a encuadrar */
+    flex-shrink: 0; /* Evita que el contenedor se aplaste */
+}
+
+/* Reglas para el SVG (y también img por si usas imágenes) */
+.skill-icon-wrapper svg, 
+.skill-icon-wrapper img {
+    width: 45px;       /* Ancho fijo */
+    height: 45px;      /* Alto fijo */
+    object-fit: contain; /* MAGIA: Esto asegura que el logo no se estire ni deforme */
+    display: block;    /* Elimina espacios extraños debajo de los iconos */
+}
+
+.skills-learning-bar {
+    margin-top: 5rem;
+    background: white;
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.04);
+}
+.learning-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.learning-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #f0fdf4;
+    color: #22c55e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.learning-info strong {
+    display: block;
+    color: #111827;
+    font-size: 1.15rem;
+    margin-bottom: 0.25rem;
+}
+.learning-info p {
+    color: #6b7280;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.learning-tags {
+    display: flex;
+    gap: 1rem;
+}
+.learning-tag {
+    background-color: #f3f4f6;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    color: #4b5563;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+.learning-tag:hover {
+    background-color: #e5e7eb;
+    color: #111827;
+}
+
+/* --- Adaptabilidad (Responsive) --- */
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 640px) {
+    .skills-section {
+        padding: 5rem 1.5rem;
+    }
+    .skills-header h1 {
+        font-size: 2.5rem;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .skills-learning-bar {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+        padding: 2.5rem 1.5rem;
+    }
+    .learning-info {
+        flex-direction: column;
+    }
+}
