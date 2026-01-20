@@ -6,6 +6,7 @@
 - [HeaderComponent](#headercomponent)
 - [HeroComponent](#herocomponent)
 - [AboutComponent](#aboutcomponent)
+- [SkillsComponent](#skillscomponent)
 - [Propiedades CSS Avanzadas](#propiedades-css-avanzadas)
 - [Referencias y Recursos](#referencias-y-recursos)
 
@@ -23,6 +24,8 @@ Este documento detalla todas las clases CSS, propiedades y atributos implementad
 5. `src/components/HeroComponent.css` - Estilos del hero (NUEVO)
 6. `src/components/AboutComponent.jsx` - Sección about (NUEVO)
 7. `src/components/AboutComponent.css` - Estilos del about (NUEVO)
+8. `src/components/SkillsComponent.jsx` - Sección de habilidades (NUEVO)
+9. `src/components/css/SkillsComponent.css` - Estilos de habilidades (NUEVO)
 
 ---
 
@@ -933,6 +936,108 @@ Estilos base con variantes:
 -   **Small Screens (`max-width: 640px`)**:
     -   Ajustes de padding y tamaño de fuente del título.
 
+
+---
+
+## 🛠️ SkillsComponent
+
+### Estructura JSX
+
+```jsx
+<section className="skills-section">
+  <article className="skills-container">
+    <div className="skills-header">...</div>
+    <div className="skills-grid">
+      {skillsData.map((skill, index) => (
+        <div key={index} className="skill-card">
+          <div className="skill-icon-wrapper" style={{backgroundColor:`${skill.color}15`, color: skill.color}}>
+            {skill.icon}
+          </div>
+          <h3>{skill.name}</h3>
+          <span className="skill-desc">{skill.desc}</span>
+          <div className="skill-progress-bg">
+            <div className="skill-progress-bar" style={{ width: "80%", backgroundColor: skill.color }}></div>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div className="skills-learning-bar">...</div>
+  </article>
+</section>
+```
+
+### Clases CSS de Skills
+
+#### `.skills-grid` (Diseño de Rejilla)
+
+```css
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+```
+- **Grid de 4 columnas**: `repeat(4, 1fr)` crea cuatro columnas del mismo tamaño.
+- **Espaciado**: `gap: 2rem` mantiene una separación limpia entre tarjetas.
+
+#### `.skill-card` (Efecto Elevación)
+
+```css
+.skill-card {
+    background: white;
+    padding: 2.5rem 2.25rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Sombra base */
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.08); /* Sombra de elevación */
+    border-color: rgba(16, 185, 129, 0.2);
+}
+```
+- **Transición Premium**: El uso de `cubic-bezier` hace que la animación de hover sea más orgánica.
+- **Elevación**: `translateY(-8px)` combinado con una sombra más grande crea una sensación de profundidad real.
+
+#### `.skill-icon-wrapper` (Iconos Dinámicos)
+
+```css
+.skill-icon-wrapper {
+    width: 65px;
+    height: 65px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.75rem;
+}
+```
+- **Enmascaramiento de Logos**: Se utiliza `object-fit: contain` en los SVGs hijos para asegurar que ningún logo se deforme sin importar su proporción original.
+- **Fondo Inteligente**: En JSX se añade un fondo dinámico basado en el color de la tecnología con `15%` de opacidad (`${skill.color}15`).
+
+#### `.skill-progress-bar` (Barras de Nivel)
+
+```css
+.skill-progress-bg {
+    width: 100%;
+    height: 6px;
+    background-color: #f3f4f6;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-progress-bar {
+    height: 100%;
+    border-radius: 10px;
+}
+```
+- **Diseño Minimalista**: Barras delgadas (`6px`) con bordes muy redondeados para un look moderno.
+
+#### Adaptabilidad (Media Queries)
+
+- **Tablets (`1024px`)**: Cambia a 2 columnas.
+- **Móvil (`640px`)**: Cambia a 1 columna y la barra de "Learning" inferior se apila verticalmente.
 
 ---
 
