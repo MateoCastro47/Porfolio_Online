@@ -3,7 +3,7 @@ import heroImage from "../assets/foto-hero.png"
 
 function HeroComponent() {
     return (
-        <main className="hero">
+        <main className="hero" id="hero">
             <section className="hero-container">
                 <article className="hero-content">
                     <div className="badge-work">
