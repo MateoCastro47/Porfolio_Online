@@ -1,0 +1,310 @@
+/* ===================================
+   PROJECT SECTION - PREMIUM DESIGN
+   =================================== */
+
+.project-section {
+    width: 100%;
+    padding: 6rem 20px;
+    background: transparent;
+}
+
+/* ===================================
+   HEADER & NAVIGATION
+   =================================== */
+
+.project-header {
+    max-width: 1200px;
+    margin: 0 auto 3.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.project-header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+.project-header p {
+    font-size: 1.15rem;
+    color: #6B7280;
+    max-width: 650px;
+    margin: 0 auto 1.5rem;
+    /* Reduced margin here, navbar handles gap */
+    line-height: 1.7;
+}
+
+/* Filter Navigation */
+.project-navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1rem 0 0 0;
+    padding: 0;
+}
+
+.project-navbar li {
+    margin: 0;
+}
+
+.project-navbar button {
+    padding: 0.6rem 1.4rem;
+    background-color: #FFFFFF;
+    color: #6B7280;
+    border: 1px solid rgba(229, 231, 235, 0.8);
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.project-navbar button:hover {
+    color: #111827;
+    border-color: #D1D5DB;
+    background-color: #F9FAFB;
+    transform: translateY(-1px);
+}
+
+.project-navbar button.active {
+    color: #FFFFFF;
+    background-color: #111827;
+    border-color: #111827;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+}
+
+/* ===================================
+   PROJECT GRID LAYOUT
+   =================================== */
+
+.projects-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* 3 columns on desktop, adapts strictly like Skills */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 20px;
+}
+
+/* ===================================
+   PROJECT CARD - PREMIUM STYLE
+   =================================== */
+
+.project-card {
+    background: #FFFFFF;
+    /* Matching Skills Card Border/Shadow */
+    border: 1px solid rgba(229, 231, 235, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    /* Smooth Transition matched to Skills */
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.08);
+    /* Elevation Shadow */
+    border-color: rgba(16, 185, 129, 0.2);
+}
+
+/* Card Header & Category */
+.project-card-header {
+    background: #FFFFFF;
+    padding: 1.5rem 1.75rem 0.5rem;
+    /* Top padding for the card */
+    display: flex;
+    justify-content: flex-start;
+}
+
+.project-category {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #4B5563;
+    background: #F3F4F6;
+    padding: 0.35rem 0.75rem;
+    border-radius: 50px;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.project-card:hover .project-category {
+    background: #E5E7EB;
+    color: #111827;
+}
+
+.project-category svg {
+    color: #6B7280;
+    width: 16px;
+    height: 16px;
+}
+
+/* ===================================
+   PROJECT CONTENT
+   =================================== */
+
+.project-content {
+    padding: 1rem 1.75rem 1.75rem;
+    /* Reduced top padding */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-title {
+    font-size: 1.35rem;
+    /* Slightly larger */
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 0.75rem 0;
+    line-height: 1.3;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    color: #6B7280;
+    line-height: 1.6;
+    margin: 0 0 1.25rem 0;
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    /* Limit lines for uniform height */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ===================================
+   TECHNOLOGY TAGS
+   =================================== */
+
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+    display: inline-block;
+    padding: 0.4rem 0.85rem;
+    /* Tag style matched to learning-tag */
+    background-color: #F3F4F6;
+    color: #4B5563;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 50px;
+    /* Pill shape */
+    transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+    background-color: #E5E7EB;
+    color: #111827;
+}
+
+/* ===================================
+   ACTION BUTTONS
+   =================================== */
+
+.project-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: auto;
+    /* Push to bottom */
+}
+
+.btn-code {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    width: 100%;
+    /* Full width button looks better in card */
+    justify-content: center;
+    background-color: #111827;
+    /* Dark primary */
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    border: 1px solid transparent;
+}
+
+.btn-code svg {
+    width: 18px;
+    height: 18px;
+}
+
+.btn-code:hover {
+    background-color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 1024px) {
+    .projects-grid {
+        /* Tablet: 2 cols */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .project-header h1 {
+        font-size: 2.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-section {
+        padding: 4rem 15px;
+    }
+
+    /* Mobile: 1 col */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .project-header h1 {
+        font-size: 2.25rem;
+    }
+
+    .project-header p {
+        font-size: 1rem;
+    }
+
+    .project-navbar ul {
+        gap: 0.5rem;
+    }
+
+    .project-navbar button {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .project-card:hover {
+        transform: none;
+        /* Disable hover lift on mobile sometimes better */
+    }
+}
