@@ -1,0 +1,62 @@
+.contact-section {
+    min-height: 100vh;
+    padding: 8rem 20px 4rem;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 600px;
+    background: #FFFFFF;
+    border: 1px solid rgba(229, 231, 235, 0.5);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.contact-header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+.contact-header p {
+    font-size: 1.1rem;
+    color: #6B7280;
+    line-height: 1.6;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Grid Layout para Nombre/Email */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #374151;
+    /* Gris oscuro para etiquetas */
+}
