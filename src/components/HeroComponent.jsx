@@ -1,6 +1,7 @@
 import "./css/HeroComponent.css"
 import heroImage from "../assets/foto-hero.jpeg"
 import cvFile from "../assets/Curriculum.pdf"
+import { Link } from "react-router-dom";
 
 function HeroComponent() {
     return (
@@ -24,7 +25,7 @@ function HeroComponent() {
                         and user-focused solutions.
                     </p>
                     <div className="hero-actions">
-                        <button className="btn btn-primary">View Projects</button>
+                        <Link to="/#projects" className="btn btn-primary">View Projects</Link>
                         <a href={cvFile} download="Curriculum_Mateo_Castro.pdf" className="btn btn-secondary" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
                             Download CV
                         </a>

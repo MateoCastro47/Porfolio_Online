@@ -94,6 +94,7 @@
   color: white;
   margin-right: 10px;
   box-shadow: 0 4px 6px rgba(16, 185, 129, 0.2);
+  text-decoration: none;
 }
 
 .btn-primary:hover {

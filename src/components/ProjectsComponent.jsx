@@ -45,7 +45,7 @@ function ProjectComponent() {
     const filters = ["All Work", "Front-end", "Back-end", "Full-stack", "UI/UX"];
 
     return (
-        <section className="project-section">
+        <section className="project-section" id="projects">
             <aside className="project-header">
                 <h1>Featured Projects</h1>
                 <p>A collection of projects completed during my time as a student</p>
