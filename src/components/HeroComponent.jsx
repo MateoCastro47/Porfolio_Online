@@ -1,5 +1,6 @@
 import "./css/HeroComponent.css"
 import heroImage from "../assets/foto-hero.jpeg"
+import cvFile from "../assets/Curriculum.pdf"
 
 function HeroComponent() {
     return (
@@ -24,7 +25,9 @@ function HeroComponent() {
                     </p>
                     <div className="hero-actions">
                         <button className="btn btn-primary">View Projects</button>
-                        <button className="btn btn-secondary">Contact for Internship</button>
+                        <a href={cvFile} download="Curriculum_Mateo_Castro.pdf" className="btn btn-secondary" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+                            Download CV
+                        </a>
                     </div>
 
                     <div className="hero-tech">
