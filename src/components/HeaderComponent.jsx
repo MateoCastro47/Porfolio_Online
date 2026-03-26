@@ -41,7 +41,7 @@ function HeaderComponent() {
                     <ul>
                         <li><Link to="/#about" onClick={closeMenu}>About</Link></li>
                         <li><Link to="/#skills" onClick={closeMenu}>Skills</Link></li>
-                        <li><Link to="/#projects" onClick={closeMenu}>Project</Link></li>
+                        <li><Link to="/#projects" onClick={closeMenu}>Projects</Link></li>
                         <li>
                             <Link to="/contact" className="btn-contact-mobile" onClick={closeMenu}>
                                 Contact

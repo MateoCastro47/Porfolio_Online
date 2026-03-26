@@ -4,45 +4,60 @@ import { useState } from "react";
 const projectsData = [
     {
         id: 1,
-        title: "Gestor NBA",
-        description: "This project is a comprehensive REST API for the integrated management of basketball leagues, developed with Spring Boot. The system allows you to manage all aspects related to the competition, from creating leagues and teams to managing player transfers and recording detailed match statistics.",
-        image: "/assets/imagen_spring.png",
-        link: "https://github.com/MateoCastro47/SpringBoot-Basket",
+        title: "ApiFichajes",
+        description: "Production-grade REST API for WiFi-based attendance monitoring via the UniFi Controller API. Built with .NET 8 Minimal APIs, EF Core, PostgreSQL and a Background Service that polls device connections every 30 seconds. Features a custom repository pattern, cookie-based authentication via DelegatingHandler, and a 11-table schema with custom PostgreSQL ENUMs.",
+        image: "/assets/imagen_dotnet.png",
+        link: "https://github.com/MateoCastro47/ApiFichajes",
         category: "Back-end",
-        technologies: ["Spring Boot", "Java", "REST API"]
+        technologies: [".NET 8", "EF Core", "PostgreSQL", "REST API"],
+        badge: null
     },
     {
         id: 2,
-        title: "Gestor Conciertos",
-        description: "This project is a Java console application that allows for the management of concert tickets. Users can reserve tickets, view their reservation, and see a list of sold and available tickets",
-        image: "/assets/imagen_java.png",
-        link: "https://github.com/MateoCastro47/GestorConciertos",
-        category: "Back-end",
-        technologies: ["Java", "Console App"]
+        title: "Nexly",
+        description: "Full-stack social network with a React frontend and Spring Boot + Spring Security + JWT backend. Features 15 database tables across 6 main entities, designed in Figma and built as the end-of-cycle capstone project for the DAW programme.",
+        image: "/assets/imagen_nexly.png",
+        link: "https://github.com/MateoCastro47",
+        category: "Full-stack",
+        technologies: ["React", "Spring Boot", "JWT", "PostgreSQL"],
+        badge: "In Progress"
     },
     {
         id: 3,
-        title: "Pokedex",
-        description: "This project is an interactive Pokédex that displays the first 151 Pokémon in the PokéAPI.Users can filter Pokémon by type and view details such as their Pokédex number, name, image, height and weight.",
-        image: "/assets/imagen_pokedex.png",
-        link: "https://github.com/MateoCastro47/Pokedex",
-        category: "Front-end",
-        technologies: ["HTML5", "JavaScript", "CSS3"]
+        title: "Gestor NBA",
+        description: "Comprehensive REST API for basketball league management built with Spring Boot. Handles leagues, teams, player transfers and detailed match statistics. Served as the foundation for learning backend architecture patterns before migrating to .NET.",
+        image: "/assets/imagen_spring.png",
+        link: "https://github.com/MateoCastro47/SpringBoot-Basket",
+        category: "Back-end",
+        technologies: ["Spring Boot", "Java", "REST API"],
+        badge: null
     },
     {
         id: 4,
-        title: "MVP",
-        description: "Website created with my colleague Mateo Quintela for the presentation of his book. A clean and modern landing page design.",
-        image: "/assets/imagen_mvp.png",
-        link: "https://github.com/MateoCastro47/MVP",
+        title: "Pokédex",
+        description: "Interactive Pokédex consuming the PokéAPI that displays the first 151 Pokémon with filtering by type and detail views showing Pokédex number, name, image, height and weight.",
+        image: "/assets/imagen_pokedex.png",
+        link: "https://github.com/MateoCastro47/Pokedex",
         category: "Front-end",
-        technologies: ["REACT", "FIGMA", "TYPESCRIPT", "TAILWIND"]
+        technologies: ["HTML5", "JavaScript", "CSS3"],
+        badge: null
+    },
+    {
+        id: 5,
+        title: "MVP",
+        description: "Landing page built with a colleague for the presentation of his book. Clean, modern design focused on conversion and readability, built with React, TypeScript and Tailwind CSS from a Figma prototype.",
+        image: "/assets/imagen_mvp.png",
+        link: "https://github.com/NaXeMate/MVP-Web",
+        category: "Front-end",
+        technologies: ["React", "TypeScript", "Tailwind", "Figma"],
+        badge: null
     }
 ]
+
 function ProjectComponent() {
     const [activeFilter, setActiveFilter] = useState("All Work");
     const filteredProjects = activeFilter === "All Work" ? projectsData : projectsData.filter(project => project.category === activeFilter);
-    const filters = ["All Work", "Front-end", "Back-end", "Full-stack", "UI/UX"];
+    const filters = ["All Work", "Front-end", "Back-end", "Full-stack"];
 
     return (
         <section className="project-section" id="projects">
@@ -75,6 +90,9 @@ function ProjectComponent() {
                                 </svg>
                                 <span>{project.category}</span>
                             </div>
+                            {project.badge && (
+                                <span className="project-badge">{project.badge}</span>
+                            )}
                         </div>
 
                         <div className="project-content">

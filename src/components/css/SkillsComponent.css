@@ -43,46 +43,59 @@
 }
 .skills-grid{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
 }
 
 .skill-card{
     background: white;
-    padding: 2.5rem 2.25rem;
+    padding: 2rem 1.75rem;
     border-radius: 20px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Sombra base */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
-    border: 1px  solid rgba(229, 231, 235, 0.5);
+    gap: 0.75rem;
+    border: 1px solid rgba(229, 231, 235, 0.5);
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .skill-card:hover{
     transform: translateY(-8px);
-    box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.08); /* Sombra de elevación */
+    box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.08);
     border-color: rgba(16, 185, 129, 0.2);
 }
 
 .skill-icon-wrapper {
-    width: 65px;  /* Aumenté ligeramente el tamaño para mejor visibilidad */
-    height: 65px;
+    width: 60px;
+    height: 60px;
     border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.75rem;
-    background-color: #f9fafb; /* Opcional: un fondo muy sutil ayuda a encuadrar */
-    flex-shrink: 0; /* Evita que el contenedor se aplaste */
+    flex-shrink: 0;
 }
 
-/* Reglas para el SVG (y también img por si usas imágenes) */
-.skill-icon-wrapper svg, 
+.skill-icon-wrapper svg,
 .skill-icon-wrapper img {
-    width: 45px;       /* Ancho fijo */
-    height: 45px;      /* Alto fijo */
-    object-fit: contain; /* MAGIA: Esto asegura que el logo no se estire ni deforme */
-    display: block;    /* Elimina espacios extraños debajo de los iconos */
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    display: block;
+}
+
+.skill-card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.skill-desc {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #9ca3af;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 .skills-learning-bar {
@@ -141,10 +154,15 @@
     color: #111827;
 }
 
-/* --- Adaptabilidad (Responsive) --- */
+/* --- Responsive --- */
+@media (max-width: 1200px) {
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 @media (max-width: 1024px) {
     .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 @media (max-width: 640px) {
@@ -155,7 +173,7 @@
         font-size: 2.5rem;
     }
     .skills-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
     .skills-learning-bar {
         flex-direction: column;

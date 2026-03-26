@@ -13,10 +13,10 @@ function ContactComponent() {
         setIsSubmitting(true);
 
         emailjs.sendForm(
-            'service_s498l46',
-            'template_diia8qs',
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
             form.current,
-            '2Epwaa5ONpjqzb2rF'
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         )
             .then((result) => {
                 console.log('Email sent successfully:', result.text);
@@ -157,7 +157,6 @@ function ContactComponent() {
                                     ></textarea>
                                 </div>
 
-                                {/* Mensajes de estado */}
                                 {submitStatus === 'success' && (
                                     <div className="alert alert-success">
                                         ✅ Message sent successfully! I'll get back to you soon.

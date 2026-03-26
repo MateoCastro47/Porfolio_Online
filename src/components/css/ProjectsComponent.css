@@ -35,7 +35,6 @@
     color: #6B7280;
     max-width: 650px;
     margin: 0 auto 1.5rem;
-    /* Reduced margin here, navbar handles gap */
     line-height: 1.7;
 }
 
@@ -89,7 +88,6 @@
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    /* 3 columns on desktop, adapts strictly like Skills */
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     padding: 0 20px;
@@ -101,12 +99,10 @@
 
 .project-card {
     background: #FFFFFF;
-    /* Matching Skills Card Border/Shadow */
     border: 1px solid rgba(229, 231, 235, 0.5);
     border-radius: 20px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     overflow: hidden;
-    /* Smooth Transition matched to Skills */
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
@@ -116,7 +112,6 @@
 .project-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.08);
-    /* Elevation Shadow */
     border-color: rgba(16, 185, 129, 0.2);
 }
 
@@ -124,9 +119,9 @@
 .project-card-header {
     background: #FFFFFF;
     padding: 1.5rem 1.75rem 0.5rem;
-    /* Top padding for the card */
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .project-category {
@@ -155,13 +150,42 @@
     height: 16px;
 }
 
+/* Badge "In Progress" */
+.project-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #d97706;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    padding: 0.3rem 0.75rem;
+    border-radius: 50px;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+}
+
+.project-badge::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: #f59e0b;
+    border-radius: 50%;
+    animation: pulse-badge 2s infinite;
+}
+
+@keyframes pulse-badge {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
 /* ===================================
    PROJECT CONTENT
    =================================== */
 
 .project-content {
     padding: 1rem 1.75rem 1.75rem;
-    /* Reduced top padding */
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -169,7 +193,6 @@
 
 .project-title {
     font-size: 1.35rem;
-    /* Slightly larger */
     font-weight: 700;
     color: #111827;
     margin: 0 0 0.75rem 0;
@@ -184,7 +207,6 @@
     flex-grow: 1;
     display: -webkit-box;
     -webkit-line-clamp: 4;
-    /* Limit lines for uniform height */
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -203,13 +225,11 @@
 .tech-tag {
     display: inline-block;
     padding: 0.4rem 0.85rem;
-    /* Tag style matched to learning-tag */
     background-color: #F3F4F6;
     color: #4B5563;
     font-size: 0.8rem;
     font-weight: 600;
     border-radius: 50px;
-    /* Pill shape */
     transition: all 0.2s ease;
 }
 
@@ -226,7 +246,6 @@
     display: flex;
     gap: 0.75rem;
     margin-top: auto;
-    /* Push to bottom */
 }
 
 .btn-code {
@@ -235,10 +254,8 @@
     gap: 0.5rem;
     padding: 0.75rem 1.25rem;
     width: 100%;
-    /* Full width button looks better in card */
     justify-content: center;
     background-color: #111827;
-    /* Dark primary */
     color: #FFFFFF;
     text-decoration: none;
     border-radius: 10px;
@@ -265,7 +282,6 @@
 
 @media (max-width: 1024px) {
     .projects-grid {
-        /* Tablet: 2 cols */
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
@@ -280,7 +296,6 @@
         padding: 4rem 15px;
     }
 
-    /* Mobile: 1 col */
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -305,6 +320,5 @@
 
     .project-card:hover {
         transform: none;
-        /* Disable hover lift on mobile sometimes better */
     }
 }
