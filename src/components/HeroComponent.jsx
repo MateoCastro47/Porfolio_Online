@@ -10,7 +10,7 @@ function HeroComponent() {
                 <article className="hero-content">
                     <div className="badge-work">
                         <span className="badge-dot"></span>
-                        OPEN TO WORK
+                        INTERN AT PROSEGUR
                     </div>
 
                     <h1 className="hero-title">
@@ -20,7 +20,7 @@ function HeroComponent() {
 
                     <p className="hero-description">
                         I am a second-year Web Application Development student,
-                        currently looking for a company where I can complete my professional internship.
+                        currently doing my professional internship at Prosegur.
                         I am passionate about programming and web development, and I enjoy building functional, well-structured,
                         and user-focused solutions.
                     </p>
