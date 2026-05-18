@@ -4,16 +4,6 @@ import { useState } from "react";
 const projectsData = [
     {
         id: 1,
-        title: "ApiFichajes",
-        description: "Production-grade REST API for WiFi-based attendance monitoring via the UniFi Controller API. Built with .NET 8 Minimal APIs, EF Core, PostgreSQL and a Background Service that polls device connections every 30 seconds. Features a custom repository pattern, cookie-based authentication via DelegatingHandler, and a 11-table schema with custom PostgreSQL ENUMs.",
-        image: "/assets/imagen_dotnet.png",
-        link: "https://github.com/MateoCastro47/ApiFichajes",
-        category: "Back-end",
-        technologies: [".NET 8", "EF Core", "PostgreSQL", "REST API"],
-        badge: null
-    },
-    {
-        id: 2,
         title: "Nexly",
         description: "Full-stack social network with a React frontend and Spring Boot + Spring Security + JWT backend. Features 15 database tables across 6 main entities, designed in Figma and built as the end-of-cycle capstone project for the DAW programme.",
         image: "/assets/imagen_nexly.png",
@@ -23,27 +13,7 @@ const projectsData = [
         badge: "In Progress"
     },
     {
-        id: 3,
-        title: "Gestor NBA",
-        description: "Comprehensive REST API for basketball league management built with Spring Boot. Handles leagues, teams, player transfers and detailed match statistics. Served as the foundation for learning backend architecture patterns before migrating to .NET.",
-        image: "/assets/imagen_spring.png",
-        link: "https://github.com/MateoCastro47/SpringBoot-Basket",
-        category: "Back-end",
-        technologies: ["Spring Boot", "Java", "REST API"],
-        badge: null
-    },
-    {
-        id: 4,
-        title: "Pokédex",
-        description: "Interactive Pokédex consuming the PokéAPI that displays the first 151 Pokémon with filtering by type and detail views showing Pokédex number, name, image, height and weight.",
-        image: "/assets/imagen_pokedex.png",
-        link: "https://github.com/MateoCastro47/Pokedex",
-        category: "Front-end",
-        technologies: ["HTML5", "JavaScript", "CSS3"],
-        badge: null
-    },
-    {
-        id: 5,
+        id: 2,
         title: "MVP",
         description: "Landing page built with a colleague for the presentation of his book. Clean, modern design focused on conversion and readability, built with React, TypeScript and Tailwind CSS from a Figma prototype.",
         image: "/assets/imagen_mvp.png",
@@ -57,7 +27,7 @@ const projectsData = [
 function ProjectComponent() {
     const [activeFilter, setActiveFilter] = useState("All Work");
     const filteredProjects = activeFilter === "All Work" ? projectsData : projectsData.filter(project => project.category === activeFilter);
-    const filters = ["All Work", "Front-end", "Back-end", "Full-stack"];
+    const filters = ["All Work", "Front-end", "Full-stack"];
 
     return (
         <section className="project-section" id="projects">
