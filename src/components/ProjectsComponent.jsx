@@ -21,6 +21,16 @@ const projectsData = [
         category: "Front-end",
         technologies: ["React", "TypeScript", "Tailwind", "Figma"],
         badge: null
+    },
+    {
+        id: 3,
+        title: "SplitPay",
+        description: "Full-stack application for managing split payments in restaurants. Allows groups to divide a bill by item, person or custom percentage, with real-time balance tracking and order management. Built with a React frontend, .NET and Spring Boot backend, and a PostgreSQL database.",
+        image: "/assets/imagen_splitpay.png",
+        link: null,
+        category: "Full-stack",
+        technologies: ["React", ".NET", "Spring Boot", "PostgreSQL"],
+        badge: "2026"
     }
 ]
 
@@ -75,14 +85,16 @@ function ProjectComponent() {
                                 ))}
                             </div>
 
-                            <div className="project-actions">
-                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn-code">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.5 3L1.5 8L5.5 13M10.5 3L14.5 8L10.5 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                    Code
-                                </a>
-                            </div>
+                            {project.link && (
+                                <div className="project-actions">
+                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn-code">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.5 3L1.5 8L5.5 13M10.5 3L14.5 8L10.5 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                        </svg>
+                                        Code
+                                    </a>
+                                </div>
+                            )}
                         </div>
                     </div>
                 ))}
