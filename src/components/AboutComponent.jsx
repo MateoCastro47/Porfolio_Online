@@ -15,13 +15,13 @@ function AboutComponent() {
                         <span className="section-subtitle">WHO I AM</span>
                     </div>
                     <h2 className="about-title">
-                        Hello, I'm a 2nd Year <br />
-                        <span className="highlight-green">DAW student</span>
+                        Hello, I'm a <br />
+                        <span className="highlight-green">Junior Web Developer</span>
                     </h2>
                     <p className="about-description">
-                        I am a second-year Web Application Development (DAW) student with a strong interest in creating clean, accessible, and user-focused web experiences. I enjoy working across both frontend and backend, continuously improving my skills through hands-on projects and practical challenges.
+                        I am a Web Application Development (DAW) graduate with a strong interest in creating clean, accessible, and user-focused web experiences. I enjoy working across both frontend and backend, continuously improving my skills through hands-on projects and real-world challenges.
                         <br /><br />
-                        I am currently doing my internship at Prosegur, where I apply my knowledge, learn from experienced professionals, and contribute to real-world projects. I consider myself a motivated, responsible, and proactive person with a strong desire to grow as a web developer.
+                        I am currently working as a Junior Web Developer at Prosegur (2026 – present), where I contribute to real-world projects alongside experienced professionals. I consider myself a motivated, responsible, and proactive person with a strong desire to keep growing as a developer.
                     </p>
                     <div className="about-cards-grid">
                         <div className="info-card">

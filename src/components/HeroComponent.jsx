@@ -10,17 +10,16 @@ function HeroComponent() {
                 <article className="hero-content">
                     <div className="badge-work">
                         <span className="badge-dot"></span>
-                        INTERN AT PROSEGUR
+                        JUNIOR WEB DEVELOPER AT PROSEGUR
                     </div>
 
                     <h1 className="hero-title">
                         Junior Web Developer<br />
-                        <span className="hero-title-accent">in training.</span>
+                        <span className="hero-title-accent">building real things.</span>
                     </h1>
 
                     <p className="hero-description">
-                        I am a second-year Web Application Development student,
-                        currently doing my professional internship at Prosegur.
+                        I am a Web Application Development (DAW) graduate currently working as a Junior Web Developer at Prosegur.
                         I am passionate about programming and web development, and I enjoy building functional, well-structured,
                         and user-focused solutions.
                     </p>
