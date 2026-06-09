@@ -14,7 +14,7 @@ const experienceData = [
         id: 2,
         type: "education",
         title: "Desarrollo de Aplicaciones Web",
-        organization: "IES",
+        organization: "CPR Liceo La Paz",
         period: "2024 — 2026",
         description: "Ciclo formativo de grado superior (CFGS) especializado en desarrollo web full-stack, bases de datos, y despliegue de aplicaciones.",
         tags: ["HTML", "CSS", "JavaScript", "Java", "SQL"],
