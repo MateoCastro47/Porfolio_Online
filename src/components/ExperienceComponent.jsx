@@ -4,28 +4,28 @@ const experienceData = [
     {
         id: 1,
         type: "work",
-        title: "Desarrollador Web",
+        title: "Web Developer",
         organization: "Prosegur",
-        period: "Junio 2026 — Actualidad",
-        description: "Desarrollo full-stack de aplicaciones web internas. Frontend con React y backend con .NET, PHP y Laravel, utilizando Docker para contenedores y Git para el control de versiones.",
+        period: "June 2026 — Present",
+        description: "Full-stack development of internal web applications. Frontend with React and backend with .NET, PHP and Laravel, using Docker for containers and Git for version control.",
         tags: ["React", ".NET", "PHP", "Laravel","TypeScript", "Docker", "Git"],
     },
     {
         id: 2,
         type: "work",
-        title: "Desarrollador Web (Prácticas)",
+        title: "Web Developer (Internship)",
         organization: "Prosegur",
-        period: "Marzo 2026 — Junio 2026",
-        description: "Prácticas de empresa con desarrollo full-stack de aplicaciones web internas, colaborando con el equipo en tecnologías de frontend y backend.",
+        period: "March 2026 — June 2026",
+        description: "Company internship doing full-stack development of internal web applications, collaborating with the team on frontend and backend technologies.",
         tags: ["React", ".NET", "PHP", "Laravel", "Docker", "Git"],
     },
     {
         id: 3,
         type: "education",
-        title: "Desarrollo de Aplicaciones Web",
+        title: "Web Application Development",
         organization: "CPR Liceo La Paz",
         period: "2024 — 2026",
-        description: "Ciclo formativo de grado superior (CFGS) especializado en desarrollo web full-stack, bases de datos, y despliegue de aplicaciones.",
+        description: "Higher-level vocational training (CFGS) specialized in full-stack web development, databases, and application deployment.",
         tags: ["HTML", "CSS", "JavaScript", "TypeScript","Java", "SQL"],
     },
 ];
@@ -57,10 +57,10 @@ function ExperienceComponent() {
                             <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
                             <polyline points="12 6 12 12 16 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                         </svg>
-                        TRAYECTORIA
+                        JOURNEY
                     </span>
-                    <h1>Experiencia & Formación</h1>
-                    <p>Mi camino en el desarrollo de software, combinando formación académica y experiencia profesional.</p>
+                    <h1>Experience & Education</h1>
+                    <p>My path in software development, combining academic training and professional experience.</p>
                 </div>
 
                 <div className="timeline">
@@ -77,7 +77,7 @@ function ExperienceComponent() {
                             <div className="timeline-card">
                                 <div className="timeline-card-header">
                                     <span className={`timeline-type-badge ${item.type === "work" ? "badge--work" : "badge--edu"}`}>
-                                        {item.type === "work" ? "Trabajo" : "Educación"}
+                                        {item.type === "work" ? "Work" : "Education"}
                                     </span>
                                     <span className="timeline-period">{item.period}</span>
                                 </div>
