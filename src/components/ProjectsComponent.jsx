@@ -10,7 +10,7 @@ const projectsData = [
         link: "https://github.com/MateoCastro47",
         category: "Full-stack",
         technologies: ["React", "Spring Boot", "JWT", "PostgreSQL"],
-        badge: "In Progress"
+        badge: "TFC"
     },
     {
         id: 2,
@@ -31,13 +31,23 @@ const projectsData = [
         category: "Full-stack",
         technologies: ["React", ".NET", "Spring Boot", "PostgreSQL"],
         badge: "2026"
+    },
+    {
+        id: 4,
+        title: "NetToJavaMigrator",
+        description: "Back-end tool that automates the migration of .NET projects to Java. Parses C# source code, maps language constructs and framework APIs to their Java/Spring equivalents, and generates the converted codebase.",
+        image: "/assets/imagen_nettojavamigrator.png",
+        link: "https://github.com/MateoCastro47",
+        category: "Back-end",
+        technologies: ["Java", "Spring Boot", ".NET", "C#"],
+        badge: null
     }
 ]
 
 function ProjectComponent() {
     const [activeFilter, setActiveFilter] = useState("All Work");
     const filteredProjects = activeFilter === "All Work" ? projectsData : projectsData.filter(project => project.category === activeFilter);
-    const filters = ["All Work", "Front-end", "Full-stack"];
+    const filters = ["All Work", "Front-end", "Back-end", "Full-stack"];
 
     return (
         <section className="project-section" id="projects">
